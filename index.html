@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>艾格妮撿風景 The Gleaners and I - Giloo Labs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header (Left/Right Groups) -->
+    <header class="header">
+        <div class="container header__inner">
+            <!-- LEFT GROUP -->
+            <div class="nav__left">
+                <a href="#" class="nav__logo">
+                    giloo<span class="badge--labs">LABS</span>
+                </a>
+                <nav class="nav__links">
+                    <a href="#" class="nav__link nav__link--active">電影</a>
+                    <a href="#" class="nav__link">
+                        國際觀影專區
+                        <span class="tag-new">New</span>
+                    </a>
+                    <a href="#" class="nav__link">策展</a>
+                    <a href="#" class="nav__link">群募</a>
+                    <a href="#" class="nav__link">成為創作者</a>
+                </nav>
+                <div class="nav__icon-btn" style="cursor: pointer;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="5" cy="12" r="2"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <circle cx="19" cy="12" r="2"></circle>
+                    </svg>
+                </div>
+            </div>
+            <!-- RIGHT GROUP -->
+            <div class="nav__right">
+                <div class="nav__icon-btn" style="cursor: pointer;">
+                    <button class="btn--icon-only" aria-label="Language">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav__user">
+                    <div class="user-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    </div>
+                    <span>Username</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- 1. HERO SECTION (Updated with Varda Still) -->
+        <section class="hero">
+            <div class="hero__bg">
+                <!-- Varda Still Placeholder (The Gleaners) -->
+                <img src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=2600" alt="Hero Background">
+            </div>
+            <div class="hero__gradient"></div>
+            <div class="hero__gradient-side"></div>
+
+            <div class="container hero__container">
+                <!-- LEFT: Info + CTAs -->
+                <div class="hero__info">
+                    <h1 class="hero__title">艾格妮撿風景</h1>
+                    <div class="hero__uploader">
+                        <div class="uploader-avatar"></div>
+                        <span>前景娛樂有限公司 Activator Marketing</span>
+                    </div>
+                    <div class="hero__meta">
+                        <span class="hero__rating">12+</span>
+                        <span>2000</span>
+                        <span>•</span>
+                        <span>82 分鐘</span>
+                        <span>•</span>
+                        <span>紀錄片</span>
+                    </div>
+                    <div class="hero__buttons">
+                        <button class="btn btn--primary" onclick="playVideo()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21"></polygon>
+                            </svg>
+                            <span>播放正片</span>
+                        </button>
+                        <button class="btn btn--secondary" onclick="playVideo()">
+                            <span>看看預告</span>
+                        </button>
+                        <div class="button-row-split">
+                            <button class="btn btn--outline" aria-label="Buy Options"><span>購買選項</span></button>
+                            <button class="btn btn--outline" aria-label="Support"><span>支持</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Socials -->
+                <div class="hero__socials">
+                    <div class="social-item">
+                        <span class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span>477</span>
+                    </div>
+                    <div class="social-item">
+                        <span class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                <polyline points="16 6 12 2 8 6"></polyline>
+                                <line x1="12" y1="2" x2="12" y2="15"></line>
+                            </svg>
+                        </span>
+                        <span>分享</span>
+                    </div>
+                    <div class="social-item">
+                        <span class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                        <span>加入片單</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CONTENT WRAPPER 2-Columns -->
+        <div class="container content-wrapper-split">
+
+            <!-- LEFT COLUMN (Main Content) -->
+            <div class="content-main">
+
+                <!-- 1. Featured Article (Updated Info) -->
+                <div class="featured-article-card">
+                    <div class="article-image">
+                        <!-- Placeholder for Varda Feature -->
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200" alt="Featured">
+                    </div>
+                    <div class="article-content">
+                        <div class="featured-tag">精選 · 專訪</div>
+                        <h2 class="featured-title">鄰家女人心中的不平之鳴——<br>守望相助</h2>
+                        <!-- CLAMPED TEXT ADDED HERE -->
+                        <div class="featured-desc-clamp">
+                            安妮華達（Agnès Varda）於 1928
+                            年出生於比利時布魯塞爾，母親來自南法靠近地中海、被稱為「獨立之島」的賽特（Sète）；父親的家族則是來自歐亞交界之處安納托力亞（Anatolia）的希臘籍難民。二次大戰期間，一家避戰到母親的故鄉賽特，華達於
+                            1954 年初夏為一位病中友人編導出的第一部作品《短角情事》，即是拍攝於此。
+                        </div>
+                        <div class="featured-read-time">02:40 閱讀</div>
+                    </div>
+                </div>
+
+                <!-- 2. Production Team (Real Varda Photos) -->
+                <section class="section-block">
+                    <h3 class="section-title">製作團隊</h3>
+                    <div class="team-scroll">
+                        <div class="team-card">
+                            <div class="team-card-img"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Agn%C3%A8s_Varda_Cannes_2017.jpg/440px-Agn%C3%A8s_Varda_Cannes_2017.jpg"
+                                    style="object-position: top;"></div>
+                            <span class="team-card-name">Agnès Varda</span>
+                            <span class="team-card-role">導演 / 編劇</span>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-card-img"><img
+                                    src="https://m.media-amazon.com/images/M/MV5BMTY3NTk0ODQ2OV5BMl5BanBnXkFtZTcwNTE1MzY1Mw@@._V1_.jpg">
+                            </div>
+                            <span class="team-card-name">Ciné Tamaris</span>
+                            <span class="team-card-role">製作公司</span>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-card-img"><img src="https://unifrance.org/img/people/13/279/279021_0.jpg">
+                            </div>
+                            <span class="team-card-name">Stéphane Krausz</span>
+                            <span class="team-card-role">攝影</span>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-card-img"><img src="https://unifrance.org/img/people/1/279/278785_0.jpg">
+                            </div>
+                            <span class="team-card-name">Joanna Bru</span>
+                            <span class="team-card-role">剪輯</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Stills & Posters (Varda-esque Content) -->
+                <section class="section-block">
+                    <h3 class="section-title">劇照與海報</h3>
+                    <div class="media-grid">
+                        <div class="poster-card-small"><img
+                                src="https://m.media-amazon.com/images/M/MV5BMjE1MTg5ODU0OV5BMl5BanBnXkFtZTgwOTYzOTMzMzE@._V1_.jpg">
+                        </div>
+                        <div class="poster-card-small"><img
+                                src="https://m.media-amazon.com/images/M/MV5BODE0ZTMwYjItMzU0MC00MjQyLWEyODItOGFmYTc0MzBjMzk5XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_.jpg">
+                        </div>
+                        <div class="poster-card-small"><img
+                                src="https://m.media-amazon.com/images/M/MV5BMjA5MTYyNjQ4OF5BMl5BanBnXkFtZTgwOTIyNzE0MzE@._V1_.jpg">
+                        </div>
+                        <div class="poster-card-small"><img
+                                src="https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtN2ZlZS00NmY2LWI4YWUtNWYyYmQwYzU1MDI3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg">
+                        </div>
+                        <div class="poster-card-small"><img
+                                src="https://m.media-amazon.com/images/M/MV5BMjIyNTI3NDc4N15BMl5BanBnXkFtZTgwNTU0OTMzMzE@._V1_.jpg">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Recommended Films (Fixed 10 items) -->
+                <section class="section-block">
+                    <h3 class="section-title">推薦影片</h3>
+                    <div class="rec-grid-5col">
+                        <!-- Row 1 -->
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1596726849491-a1e6878c772e?w=500"></div>
+                            <div class="film-title">臉龐，村莊</div>
+                            <div class="film-meta">2017 · 紀錄片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500"></div>
+                            <div class="film-title">人生</div>
+                            <div class="film-meta">2000 · 劇情片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500"></div>
+                            <div class="film-title">沙灘上的艾格妮</div>
+                            <div class="film-meta">2008 · 紀錄片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500"></div>
+                            <div class="film-title">老人與海</div>
+                            <div class="film-meta">1999 · 動畫片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1517604931442-71053e3e2c6c?w=500"></div>
+                            <div class="film-title">一一</div>
+                            <div class="film-meta">2000 · 劇情片</div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1543536448-d209d2d15928?w=500"></div>
+                            <div class="film-title">牯嶺街少年殺人事件</div>
+                            <div class="film-meta">1991 · 劇情片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?w=500"></div>
+                            <div class="film-title">悲情城市</div>
+                            <div class="film-meta">1989 · 劇情片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500"></div>
+                            <div class="film-title">戀戀風塵</div>
+                            <div class="film-meta">1986 · 劇情片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1533929736472-594e69d8cfcf?w=500"></div>
+                            <div class="film-title">千禧曼波</div>
+                            <div class="film-meta">2001 · 劇情片</div>
+                        </div>
+                        <div class="film-card">
+                            <div class="film-thumb"><img
+                                    src="https://images.unsplash.com/photo-1574375927938-d5a9d633e9d8?w=500"></div>
+                            <div class="film-title">刺客聶隱娘</div>
+                            <div class="film-meta">2015 · 劇情片</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Curated Selections -->
+                <section class="section-block">
+                    <h3 class="section-title">精選策展</h3>
+                    <div class="curated-grid">
+                        <div class="curated-card">
+                            <div class="curated-thumb">
+                                <img src="https://images.unsplash.com/photo-1517604931442-71053e3e2c6c?w=500">
+                            </div>
+                            <div class="curated-info">
+                                <div class="curated-tag">專題 . 焦點</div>
+                                <div class="curated-title">技術與人性的交織：當代紀錄片的新視野</div>
+                                <div class="curated-desc">探索數位時代下，紀錄片如何運用新技術捕捉真實，同時保持對人性的溫暖關懷。</div>
+                            </div>
+                        </div>
+                        <div class="curated-card">
+                            <div class="curated-thumb">
+                                <img src="https://images.unsplash.com/photo-1543536448-d209d2d15928?w=500">
+                            </div>
+                            <div class="curated-info">
+                                <div class="curated-tag">專題 . 歷史</div>
+                                <div class="curated-title">從黑白到彩色：台灣電影修復之路</div>
+                                <div class="curated-desc">回顧台灣電影修復的歷程，看見經典如何在現代技術下重獲新生。</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT COLUMN (Sticky Sidebar) -->
+            <div class="content-sidebar">
+
+                <!-- Film Info -->
+                <div class="film-details">
+                    <div class="film-synopsis">
+                        艾格妮透過鏡頭捕捉那些被社會遺忘的人們，從拾穗者到現代社會的邊緣人。她以獨特的視角，溫柔而堅定地展現了這些人的生活狀態與尊嚴。這不僅是一部紀錄片，更是一次對人性的深刻探索。
+                    </div>
+
+                    <div class="meta-list">
+                        <span class="meta-label">類別</span>
+                        <div class="meta-values">
+                            <span class="meta-tag">人物</span>
+                            <span class="meta-tag">文化社會</span>
+                        </div>
+
+                        <span class="meta-label">導演</span>
+                        <span class="meta-value">Agnès Varda</span>
+
+                        <span class="meta-label">年份</span>
+                        <span class="meta-value">2021</span>
+
+                        <span class="meta-label">發行地</span>
+                        <span class="meta-value">Taiwan</span>
+
+                        <span class="meta-label">語言</span>
+                        <span class="meta-value">French</span>
+
+                        <span class="meta-label">字幕</span>
+                        <span class="meta-value">English</span>
+
+                        <span class="meta-label">影展/獎項</span>
+                        <span class="meta-value">2000 歐洲電影獎最佳紀錄片<br>2002 國家影評人協會獎</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-left">
+                    <div style="font-weight:700; font-size:18px;">giloo<span class="badge--labs">LABS</span></div>
+                    <div class="footer-links">
+                        <span>關於我們</span>
+                        <span>服務條款</span>
+                        <span>隱私權政策</span>
+                        <span>聯絡我們</span>
+                    </div>
+                </div>
+                <div class="footer-right" style="font-size:12px; color:#666;">
+                    © 2024 Giloo Inc. All Rights Reserved.
+                </div>
+            </div>
+            <div style="margin-top:20px; display:flex; justify-content:flex-end; gap:16px; color:#666;">
+                <span>FB</span>
+                <span>IG</span>
+                <span>X</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-wrapper">
+            <div class="modal-close" onclick="closeModal()">✕</div>
+            <div class="video-placeholder">
+                <div style="text-align:center;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21"></polygon>
+                    </svg>
+                    <div style="margin-top:16px;">Video Player Placeholder</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
