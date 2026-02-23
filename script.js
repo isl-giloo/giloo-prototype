@@ -43,3 +43,108 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Hero Intersection Observer for Sticky CTA
+document.addEventListener('DOMContentLoaded', () => {
+    const heroSection = document.querySelector('.hero');
+    const appContainer = document.getElementById('appContainer');
+
+    if (heroSection && appContainer) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If hero is completely out of view (intersection ratio is 0)
+                if (!entry.isIntersecting) {
+                    appContainer.classList.add('is-hero-hidden');
+                } else {
+                    appContainer.classList.remove('is-hero-hidden');
+                }
+            });
+        }, {
+            root: null, // viewport
+            threshold: 0 // trigger as soon as even 1px is visible/hidden
+        });
+        
+        observer.observe(heroSection);
+    }
+});
+
+// Ask AI Chat Widget Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+    const chatBody = document.getElementById('chatBody');
+    const chatClear = document.getElementById('chatClear');
+
+    const BOT_RESPONSE_TEXT = "我收到你的問題了，下一步可以串接模型";
+    const INITIAL_MESSAGE = "我可以幫你整理本片資訊、解釋名詞，或推薦相似作品";
+
+    if (!chatInput || !chatSend || !chatBody) return;
+
+    function addMessage(text, isUser = false) {
+        const bubble = document.createElement('div');
+        bubble.classList.add('chat-bubble');
+        bubble.classList.add(isUser ? 'bubble-user' : 'bubble-bot');
+        bubble.textContent = text;
+
+        chatBody.appendChild(bubble);
+        scrollToBottom();
+    }
+
+    function scrollToBottom() {
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function handleSend() {
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        // User message
+        addMessage(text, true);
+        chatInput.value = '';
+
+        // Mock Bot Response
+        setTimeout(() => {
+            addMessage(BOT_RESPONSE_TEXT, false);
+        }, 600);
+    }
+
+    // Event Listeners
+    chatSend.addEventListener('click', handleSend);
+
+    chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            handleSend();
+        }
+    });
+
+    if (chatClear) {
+        chatClear.addEventListener('click', () => {
+            chatBody.innerHTML = '';
+            // Restore initial message
+            addMessage(INITIAL_MESSAGE, false);
+        });
+    }
+
+    // AI Chat Panel Toggle Logic
+    const aiToggleBtn = document.getElementById('aiToggleBtn');
+    const appContainer = document.getElementById('appContainer');
+    const aiSidePanel = document.getElementById('aiSidePanel');
+
+    let isChatOpen = false;
+
+    if (aiToggleBtn && appContainer && aiSidePanel) {
+        aiToggleBtn.addEventListener('click', () => {
+            isChatOpen = !isChatOpen;
+
+            if (isChatOpen) {
+                appContainer.classList.add('chat-open');
+                aiSidePanel.classList.add('open');
+                aiToggleBtn.classList.add('active');
+                if (chatInput) chatInput.focus();
+            } else {
+                appContainer.classList.remove('chat-open');
+                aiSidePanel.classList.remove('open');
+                aiToggleBtn.classList.remove('active');
+            }
+        });
+    }
+});
