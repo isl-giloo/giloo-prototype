@@ -70,116 +70,136 @@
     <!-- Main -->
     <main class="app-container" id="appContainer">
 
-        <!-- 1. HERO SECTION (Updated with Varda Still) -->
-        <section class="hero">
-            <div class="hero__bg">
-                <!-- Autoplay Video Background -->
-                <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-                    autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
-                </video>
-            </div>
-            <div class="hero__gradient"></div>
-            <div class="hero__gradient-side"></div>
+        <!-- 2-COLUMN LAYOUT WRAPPER -->
+        <div class="container layout-two-column">
 
-            <div class="container hero__container">
-                <!-- LEFT: Info + CTAs -->
-                <div class="hero__info">
-                    <h1 class="hero__title">艾格妮撿風景</h1>
-                    <div class="hero__uploader">
+            <!-- ===============================
+                 COLUMN A: MAIN CONTENT (LEFT)
+                 =============================== -->
+            <div class="col-main">
+
+                <!-- A-1: Media Player (Previously Hero Background) -->
+                <div class="media-player-wrapper">
+                    <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                        autoplay loop muted playsinline>
+                    </video>
+                </div>
+
+                <!-- A-2: Header / Meta / CTAs -->
+                <div class="film-header-area">
+                    <div class="hero__uploader" style="margin-bottom:0;">
                         <div class="uploader-avatar"></div>
                         <span>前景娛樂有限公司 Activator Marketing</span>
                     </div>
-                    <div class="hero__meta">
-                        <a href="#" class="meta-link">安妮 · 華達</a>
-                        <span class="meta-dot">•</span>
-                        <a href="#" class="meta-tag-link">紀錄片</a>
-                        <span class="meta-dot">•</span>
-                        <a href="#" class="meta-tag-link">歷史</a>
-                        <a href="#" class="meta-tag-link">實驗</a>
-                        <span class="meta-dot">•</span>
-                        <span>2000</span>
-                        <span class="meta-dot">•</span>
-                        <span style="display:inline-flex; align-items:center; gap:6px;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
-                            </svg>
-                            1.2K 人 看過
-                        </span>
-                    </div>
-                    <div class="hero__buttons"
-                        style="display: flex; flex-direction: row; gap: 12px; align-items: center; max-width: none;">
-                        <button class="btn btn--primary" onclick="playVideo()" style="width: auto; padding: 10px 24px;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="5 3 19 12 5 21"></polygon>
-                            </svg>
-                            <span>播放正片</span>
-                        </button>
-                        <button class="icon-circle-btn" aria-label="加入片單"
-                            style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.15); color: white; border: none; flex-shrink: 0; transition: background-color 0.2s; cursor: pointer;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
 
-                <!-- RIGHT: Socials -->
-                <div class="hero__socials">
-                    <div class="social-item">
-                        <span class="social-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                </path>
-                            </svg>
-                        </span>
-                        <span>477</span>
-                    </div>
-                    <div class="social-item">
-                        <span class="social-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                                <polyline points="16 6 12 2 8 6"></polyline>
-                                <line x1="12" y1="2" x2="12" y2="15"></line>
-                            </svg>
-                        </span>
-                        <span>分享</span>
-                    </div>
-                    <div class="social-item">
-                        <span class="social-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 12 20 22 4 22 4 12"></polyline>
-                                <rect x="2" y="7" width="20" height="5"></rect>
-                                <line x1="12" y1="22" x2="12" y2="7"></line>
-                                <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
-                                <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
-                            </svg>
-                        </span>
-                        <span>支持</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. CONTENT WRAPPER 2-Columns -->
-        <div class="container content-wrapper-split">
-
-            <!-- LEFT COLUMN (Meta Content) -->
-            <div class="content-left">
-                <div class="left-column-meta">
-                    <div class="film-details">
-                        <div class="film-synopsis">
-                            艾格妮透過鏡頭捕捉那些被社會遺忘的人們，從拾穗者到現代社會的邊緣人。她以獨特的視角，溫柔而堅定地展現了這些人的生活狀態與尊嚴。這不僅是一部紀錄片，更是一次對人性的深刻探索。
+                    <div class="film-header-main">
+                        <div>
+                            <h1 class="hero__title" style="margin-bottom:8px; font-size:2.5rem;">艾格妮撿風景</h1>
+                            <div class="hero__meta" style="margin-bottom:0;">
+                                <a href="#" class="meta-link">安妮 · 華達</a>
+                                <span class="meta-dot">•</span>
+                                <a href="#" class="meta-tag-link">紀錄片</a>
+                                <span class="meta-dot">•</span>
+                                <a href="#" class="meta-tag-link">歷史</a>
+                                <a href="#" class="meta-tag-link">實驗</a>
+                                <span class="meta-dot">•</span>
+                                <span>2000</span>
+                                <span class="meta-dot">•</span>
+                                <span style="display:inline-flex; align-items:center; gap:6px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                    1.2K 人 看過
+                                </span>
+                            </div>
                         </div>
 
+                        <!-- CTA Wrapping Group (v2 Refinement: Inline alignment) -->
+                        <div class="film-header-cta-group"
+                            style="display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap; margin-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px;">
 
+                            <!-- Main CTAs -->
+                            <div class="hero__buttons"
+                                style="display: flex; flex-direction: row; gap: 12px; align-items: center; max-width: none;">
+                                <button class="btn btn--primary" onclick="playVideo()"
+                                    style="width: auto; padding: 10px 24px;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="5 3 19 12 5 21"></polygon>
+                                    </svg>
+                                    <span>播放正片</span>
+                                </button>
+                                <button class="icon-circle-btn" aria-label="加入片單"
+                                    style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.15); color: white; border: none; flex-shrink: 0; transition: background-color 0.2s; cursor: pointer;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Sub CTAs (Socials / Support) -->
+                            <div class="hero__socials" style="display: flex; align-items: center; gap: 24px;">
+                                <div class="social-item">
+                                    <span class="social-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>477</span>
+                                </div>
+                                <div class="social-item">
+                                    <span class="social-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                            <polyline points="16 6 12 2 8 6"></polyline>
+                                            <line x1="12" y1="2" x2="12" y2="15"></line>
+                                        </svg>
+                                    </span>
+                                    <span>分享</span>
+                                </div>
+                                <div class="social-item">
+                                    <span class="social-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                                            <rect x="2" y="7" width="20" height="5"></rect>
+                                            <line x1="12" y1="22" x2="12" y2="7"></line>
+                                            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                                            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                                        </svg>
+                                    </span>
+                                    <span>支持</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A-3: Film Details (Synopsis & Poster Flex) -->
+                <div class="film-details-container" style="display: flex; gap: 32px; flex-wrap: nowrap;">
+
+                    <!-- Poster Column (Moved to Left, Fixed 90px width, 9:16 approx) -->
+                    <div class="film-poster" style="flex: 0 0 90px; width: 90px;">
+                        <div
+                            style="width: 100%; aspect-ratio: 9/16; background: #111; border-radius: var(--radius-sm); overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=800" alt="Poster"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                    </div>
+
+                    <!-- Details Text (Moved to Right) -->
+                    <div style="flex: 1; min-width: 0;">
+                        <h3 class="section-title">影片簡介</h3>
+                        <div class="film-synopsis" style="margin-bottom: 24px; color: #ccc; line-height: 1.6;">
+                            艾格妮透過鏡頭捕捉那些被社會遺忘的人們，從拾穗者到現代社會的邊緣人。她以獨特的視角，溫柔而堅定地展現了這些人的生活狀態與尊嚴。這不僅是一部紀錄片，更是一次對人性的深刻探索。
+                        </div>
 
                         <div class="meta-list">
                             <span class="meta-label">類別</span>
@@ -226,10 +246,13 @@
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <!-- RIGHT COLUMN (Feed Content) -->
-            <div class="content-right">
+            <!-- ===============================
+                 COLUMN B: SUPPLEMENTARY (RIGHT)
+                 =============================== -->
+            <div class="col-sidebar">
 
                 <!-- 1. Featured Article (Updated Info) -->
                 <div class="featured-article-card">
