@@ -754,14 +754,12 @@ ul {
     color: #666;
 }
 
-/* Posters (Refined Grid Max-Fit) */
+/* Posters — 4-col grid */
 .media-grid {
     display: grid;
-    /* Desktop (default): 5 columns */
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
     align-items: start;
-    /* Prevent items from stretching to row height */
 }
 
 .poster-card-small {
@@ -777,9 +775,7 @@ ul {
 .poster-card-small img {
     width: 100%;
     height: 100%;
-    /* Fill container */
     object-fit: cover;
-    /* Crop to fill */
     transition: transform 0.3s;
 }
 
@@ -787,33 +783,35 @@ ul {
     transform: scale(1.05);
 }
 
-/* Tablet (768px - 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* xl / lg → 2 col */
+@media (max-width: 1199px) {
     .media-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile (< 768px) */
-@media (max-width: 767px) {
+/* md → 1 col */
+@media (max-width: 599px) {
     .media-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* Recommended Grid (5 items per row) */
-.rec-grid-5col {
+/* Recommended Grid — 4-col, 16:9 thumbs */
+.rec-grid-4col {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
 .film-card {
     cursor: pointer;
+    min-width: 0;
 }
 
 .film-thumb {
-    aspect-ratio: 2/3;
+    aspect-ratio: 16/9;
+    /* changed from 2:3 to 16:9 */
     background: #333;
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -828,14 +826,31 @@ ul {
 }
 
 .film-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .film-meta {
     font-size: 11px;
     color: #666;
+}
+
+/* xl / lg → 2 col */
+@media (max-width: 1199px) {
+    .rec-grid-4col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* md → 1 col */
+@media (max-width: 599px) {
+    .rec-grid-4col {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Curated Grid — single column, fills right-column width */
