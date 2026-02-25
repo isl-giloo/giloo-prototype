@@ -766,6 +766,20 @@ ul {
     /* Reduced gap since columns are narrower */
 }
 
+/* Stills Grid (4 columns, single row) */
+.stills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Recommended Films Grid (4 columns × 2 rows) */
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
 .media-grid {
     display: grid;
     /* Desktop (default): 5 columns */
@@ -835,6 +849,11 @@ ul {
     position: relative;
 }
 
+/* 16:9 modifier for recommended films */
+.film-thumb--16-9 {
+    aspect-ratio: 16 / 9;
+}
+
 .film-thumb img {
     width: 100%;
     height: 100%;
@@ -842,9 +861,15 @@ ul {
 }
 
 .film-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     margin-bottom: 2px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    line-height: 1.3;
 }
 
 .film-meta {
