@@ -118,7 +118,7 @@
 
                         <!-- CTA Wrapping Group (v2 Refinement: Inline alignment) -->
                         <div class="film-header-cta-group"
-                            style="display: flex; align-items: center; justify-content: flex-start; gap: 24px; flex-wrap: wrap; margin-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px;">
+                            style="display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; margin-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 24px; width: 100%;">
 
                             <!-- Main CTAs -->
                             <div class="hero__buttons"
@@ -141,7 +141,7 @@
                             </div>
 
                             <!-- Sub CTAs (Socials / Support) -->
-                            <div class="hero__socials" style="display: flex; align-items: center; gap: 24px;">
+                            <div class="hero__socials">
                                 <div class="social-item">
                                     <span class="social-icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -196,7 +196,6 @@
 
                     <!-- Details Text (Moved to Right) -->
                     <div style="flex: 1; min-width: 0;">
-                        <h3 class="section-title">影片簡介</h3>
                         <div class="film-synopsis" style="margin-bottom: 24px; color: #ccc; line-height: 1.6;">
                             艾格妮透過鏡頭捕捉那些被社會遺忘的人們，從拾穗者到現代社會的邊緣人。她以獨特的視角，溫柔而堅定地展現了這些人的生活狀態與尊嚴。這不僅是一部紀錄片，更是一次對人性的深刻探索。
                         </div>
@@ -273,66 +272,103 @@
                     </div>
                 </div>
 
+                <!-- 1.5. Awards Carousel (New) -->
+                <section class="section-block">
+                    <h3 class="section-title">獲獎紀錄</h3>
+                    <div class="awards-carousel">
+                        <div class="award-card">
+                            <span class="award-year">2000</span>
+                            <span class="award-name">歐洲電影獎</span>
+                            <span class="award-category">最佳紀錄片</span>
+                        </div>
+                        <div class="award-card">
+                            <span class="award-year">2002</span>
+                            <span class="award-name">國家影評人協會</span>
+                            <span class="award-category">最佳非虛構電影</span>
+                        </div>
+                        <div class="award-card">
+                            <span class="award-year">2001</span>
+                            <span class="award-name">法國電影評論協會</span>
+                            <span class="award-category">最佳影片</span>
+                        </div>
+                        <div class="award-card">
+                            <span class="award-year">2001</span>
+                            <span class="award-name">洛杉磯影評人協會</span>
+                            <span class="award-category">最佳紀錄片</span>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- 2. Production Team (Real Varda Photos) -->
                 <section class="section-block">
-                    <h3 class="section-title">製作團隊</h3>
+                    <h3 class="section-title">演職人員</h3>
                     <div class="team-scroll">
                         <div class="team-card">
                             <div class="team-card-img"><img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Agn%C3%A8s_Varda_Cannes_2017.jpg/440px-Agn%C3%A8s_Varda_Cannes_2017.jpg"
-                                    style="object-position: top;"></div>
+                                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face"
+                                    alt="Agnès Varda"></div>
                             <span class="team-card-name">Agnès Varda</span>
-                            <span class="team-card-role">導演 / 編劇</span>
+                            <span class="team-card-role">導演 / 編劇 / 演出</span>
                         </div>
                         <div class="team-card">
                             <div class="team-card-img"><img
-                                    src="https://m.media-amazon.com/images/M/MV5BMTY3NTk0ODQ2OV5BMl5BanBnXkFtZTcwNTE1MzY1Mw@@._V1_.jpg">
-                            </div>
-                            <span class="team-card-name">Ciné Tamaris</span>
-                            <span class="team-card-role">製作公司</span>
-                        </div>
-                        <div class="team-card">
-                            <div class="team-card-img"><img src="https://unifrance.org/img/people/13/279/279021_0.jpg">
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+                                    alt="Stéphane Krausz">
                             </div>
                             <span class="team-card-name">Stéphane Krausz</span>
                             <span class="team-card-role">攝影</span>
                         </div>
                         <div class="team-card">
-                            <div class="team-card-img"><img src="https://unifrance.org/img/people/1/279/278785_0.jpg">
+                            <div class="team-card-img"><img
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
+                                    alt="Joanna Bru">
                             </div>
                             <span class="team-card-name">Joanna Bru</span>
                             <span class="team-card-role">剪輯</span>
                         </div>
+                        <div class="team-card">
+                            <div class="team-card-img"><img
+                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face"
+                                    alt="Bodan Litnanski">
+                            </div>
+                            <span class="team-card-name">Bodan Litnanski</span>
+                            <span class="team-card-role">受訪者</span>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-card-img"><img
+                                    src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop&crop=face"
+                                    alt="Jean Laplanche">
+                            </div>
+                            <span class="team-card-name">Jean Laplanche</span>
+                            <span class="team-card-role">受訪者</span>
+                        </div>
                     </div>
                 </section>
 
-                <!-- 3. Stills & Posters (Varda-esque Content) -->
+                <!-- 3. Stills & Posters (Grid 3x2) -->
                 <section class="section-block">
                     <h3 class="section-title">劇照與海報</h3>
-                    <div class="media-grid">
-                        <div class="poster-card-small"><img
-                                src="https://m.media-amazon.com/images/M/MV5BMjE1MTg5ODU0OV5BMl5BanBnXkFtZTgwOTYzOTMzMzE@._V1_.jpg">
-                        </div>
-                        <div class="poster-card-small"><img
-                                src="https://m.media-amazon.com/images/M/MV5BODE0ZTMwYjItMzU0MC00MjQyLWEyODItOGFmYTc0MzBjMzk5XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_.jpg">
-                        </div>
-                        <div class="poster-card-small"><img
-                                src="https://m.media-amazon.com/images/M/MV5BMjA5MTYyNjQ4OF5BMl5BanBnXkFtZTgwOTIyNzE0MzE@._V1_.jpg">
-                        </div>
-                        <div class="poster-card-small"><img
-                                src="https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtN2ZlZS00NmY2LWI4YWUtNWYyYmQwYzU1MDI3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg">
-                        </div>
-                        <div class="poster-card-small"><img
-                                src="https://m.media-amazon.com/images/M/MV5BMjIyNTI3NDc4N15BMl5BanBnXkFtZTgwNTU0OTMzMzE@._V1_.jpg">
-                        </div>
+                    <div class="gallery-grid-3x2">
+                        <div class="poster-card-small"><img src="https://picsum.photos/seed/still1/400/267"
+                                alt="Still 1"></div>
+                        <div class="poster-card-small"><img src="https://picsum.photos/seed/still2/400/267"
+                                alt="Still 2"></div>
+                        <div class="poster-card-small"><img src="https://picsum.photos/seed/still3/400/267"
+                                alt="Still 3"></div>
+                        <div class="poster-card-small"><img src="https://picsum.photos/seed/still4/400/267"
+                                alt="Still 4"></div>
+                        <div class="poster-card-small"><img src="https://picsum.photos/seed/still5/400/267"
+                                alt="Still 5"></div>
+                        <div class="poster-card-small"><img src="https://picsum.photos/seed/still6/400/267"
+                                alt="Still 6"></div>
                     </div>
                 </section>
 
-                <!-- 4. Recommended Films (Fixed 10 items) -->
+                <!-- 4. Recommended Films (Grid 3x2) -->
                 <section class="section-block">
-                    <h3 class="section-title">推薦影片</h3>
-                    <div class="rec-grid-5col">
-                        <!-- Row 1 -->
+                    <h3 class="section-title">相關推薦</h3>
+                    <div class="gallery-grid-3x2">
+                        <!-- 6 Items for 3x2 Grid -->
                         <div class="film-card">
                             <div class="film-thumb"><img
                                     src="https://images.unsplash.com/photo-1596726849491-a1e6878c772e?w=500"></div>
@@ -357,42 +393,18 @@
                             <div class="film-title">老人與海</div>
                             <div class="film-meta">1999 · 動畫片</div>
                         </div>
+                        <!-- NEW 2 ITEMS -->
                         <div class="film-card">
                             <div class="film-thumb"><img
                                     src="https://images.unsplash.com/photo-1517604931442-71053e3e2c6c?w=500"></div>
                             <div class="film-title">一一</div>
                             <div class="film-meta">2000 · 劇情片</div>
                         </div>
-                        <!-- Row 2 -->
                         <div class="film-card">
                             <div class="film-thumb"><img
                                     src="https://images.unsplash.com/photo-1543536448-d209d2d15928?w=500"></div>
                             <div class="film-title">牯嶺街少年殺人事件</div>
                             <div class="film-meta">1991 · 劇情片</div>
-                        </div>
-                        <div class="film-card">
-                            <div class="film-thumb"><img
-                                    src="https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?w=500"></div>
-                            <div class="film-title">悲情城市</div>
-                            <div class="film-meta">1989 · 劇情片</div>
-                        </div>
-                        <div class="film-card">
-                            <div class="film-thumb"><img
-                                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500"></div>
-                            <div class="film-title">戀戀風塵</div>
-                            <div class="film-meta">1986 · 劇情片</div>
-                        </div>
-                        <div class="film-card">
-                            <div class="film-thumb"><img
-                                    src="https://images.unsplash.com/photo-1533929736472-594e69d8cfcf?w=500"></div>
-                            <div class="film-title">千禧曼波</div>
-                            <div class="film-meta">2001 · 劇情片</div>
-                        </div>
-                        <div class="film-card">
-                            <div class="film-thumb"><img
-                                    src="https://images.unsplash.com/photo-1574375927938-d5a9d633e9d8?w=500"></div>
-                            <div class="film-title">刺客聶隱娘</div>
-                            <div class="film-meta">2015 · 劇情片</div>
                         </div>
                     </div>
                 </section>

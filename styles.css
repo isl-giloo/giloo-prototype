@@ -289,6 +289,50 @@ ul {
     /* Adjustment for alignment */
 }
 
+/* Hero Right: Social Actions */
+.hero__socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Set smaller gap for breathing room */
+    margin-left: auto;
+    /* Push to the right edge */
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    /* Keep or reduce if necessary */
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.social-item:hover {
+    opacity: 1;
+}
+
+.social-icon {
+    width: 20px;
+    /* Reduced from 24px */
+    height: 20px;
+    /* Reduced from 24px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon svg {
+    width: 16px;
+    /* Reduced from 20px */
+    height: 16px;
+    /* Reduced from 20px */
+}
+
 /* Right Group */
 .nav__right {
     display: flex;
@@ -347,13 +391,21 @@ ul {
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     margin-top: calc(var(--header-height) + 40px);
-    padding-bottom: 60px;
+
+    /* v3: Independent Scrolling Constraint */
+    height: calc(100vh - var(--header-height) - 40px);
+    /* 40px is for margin-top offset */
+    overflow: hidden;
+    /* Prevent parent scrolling */
 }
 
 @media (max-width: 1024px) {
     .layout-two-column {
         grid-template-columns: 1fr;
         gap: 32px;
+        height: auto;
+        /* Revert on mobile */
+        overflow: visible;
     }
 }
 
@@ -363,6 +415,17 @@ ul {
     flex-direction: column;
     gap: var(--spacing-2xl);
     min-width: 0;
+
+    /* v3: Independent Scrolling */
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.col-main::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
 }
 
 /* Right Column Context */
@@ -371,19 +434,33 @@ ul {
     flex-direction: column;
     gap: var(--spacing-3xl);
     min-width: 0;
+
+    /* v3: Independent Scrolling */
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    padding-bottom: 60px;
+    /* Buffer for scrolling */
+}
+
+.col-sidebar::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
 }
 
 /* A-1 Media Player Wrapper */
 .media-player-wrapper {
     width: 100%;
+    flex-shrink: 0;
+    /* Critical Fix: Prevent flex container from crushing the video */
     aspect-ratio: 16 / 9;
     background: #000;
     overflow: hidden;
-    border-radius: var(--radius-lg);
-    /* Sticky Setup */
+    /* Sticky Setup & Masking */
     position: sticky;
-    top: calc(var(--header-height) + 20px);
-    z-index: 20;
+    top: 0;
+    z-index: 10;
 }
 
 .media-player-wrapper video {
@@ -397,6 +474,10 @@ ul {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+    padding: 20px;
+    /* Add internal padding */
+    padding-top: 0;
+    /* Let col-main gap handle the top space */
 }
 
 .film-header-main {
@@ -413,6 +494,11 @@ ul {
 
 
 /* 3.1 Move Meta to Left & Sticky */
+.film-details-container {
+    padding: 0 20px 40px 20px;
+    /* Add bottom & side paddings */
+}
+
 .left-column-meta {
     margin-bottom: 1.5rem;
     align-self: flex-start;
@@ -575,10 +661,54 @@ ul {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 6;
+    line-clamp: 6;
     -webkit-box-orient: vertical;
     line-height: 1.5;
 }
 
+/* Awards Carousel (New) */
+.awards-carousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+}
+
+.awards-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.award-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 140px;
+}
+
+.award-year {
+    font-size: 11px;
+    color: var(--color-accent);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.award-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.award-category {
+    font-size: 11px;
+    color: #999;
+}
 
 /* Team (Scrollable) */
 .team-scroll {
@@ -597,9 +727,11 @@ ul {
 
 .team-card-img {
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 1 / 1;
+    /* Changed: Portrait to Circle (1:1) */
     background: #222;
-    border-radius: var(--radius-sm);
+    border-radius: 50%;
+    /* Circle for crew avatars */
     overflow: hidden;
     margin-bottom: 8px;
 }
@@ -627,6 +759,13 @@ ul {
 }
 
 /* Posters (Refined Grid Max-Fit) */
+.gallery-grid-3x2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    /* Reduced gap since columns are narrower */
+}
+
 .media-grid {
     display: grid;
     /* Desktop (default): 5 columns */
@@ -638,9 +777,10 @@ ul {
 
 .poster-card-small {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    /* Enforce 16:9 like .film-thumb */
-    background: #111;
+    aspect-ratio: 3 / 2;
+    /* Changed to 3:2 as specified */
+    background: #222;
+    /* Dark fallback for broken images */
     border-radius: var(--radius-sm);
     cursor: pointer;
     position: relative;
@@ -686,7 +826,8 @@ ul {
 }
 
 .film-thumb {
-    aspect-ratio: 16/9;
+    aspect-ratio: 2/3;
+    /* Changed to 2:3 portrait (classic movie poster ratio) */
     background: #222;
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -714,13 +855,15 @@ ul {
 /* Curated Grid */
 .curated-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--spacing-lg);
 }
 
 .curated-card {
     display: flex;
-    gap: var(--spacing-md);
+    flex-direction: column;
+    /* Stack image above content */
+    gap: 0;
     background: rgba(255, 255, 255, 0.03);
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -733,9 +876,12 @@ ul {
 }
 
 .curated-thumb {
-    width: 40%;
-    aspect-ratio: 16/9;
+    width: 100%;
+    /* Full width for single-column big image */
+    aspect-ratio: 16 / 9;
     background: #222;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .curated-thumb img {
@@ -770,7 +916,9 @@ ul {
     line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* =========================================
