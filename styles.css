@@ -725,9 +725,9 @@ ul {
 
 .team-card-img {
     width: 100%;
-    aspect-ratio: 3/4;
-    background: #222;
-    border-radius: var(--radius-sm);
+    aspect-ratio: 1/1;
+    background: #333;
+    border-radius: 50%;
     overflow: hidden;
     margin-bottom: 8px;
 }
@@ -766,9 +766,8 @@ ul {
 
 .poster-card-small {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    /* Enforce 16:9 like .film-thumb */
-    background: #111;
+    aspect-ratio: 3/2;
+    background: #333;
     border-radius: var(--radius-sm);
     cursor: pointer;
     position: relative;
@@ -814,8 +813,8 @@ ul {
 }
 
 .film-thumb {
-    aspect-ratio: 16/9;
-    background: #222;
+    aspect-ratio: 2/3;
+    background: #333;
     border-radius: var(--radius-sm);
     overflow: hidden;
     margin-bottom: 8px;
@@ -863,7 +862,8 @@ ul {
 .curated-thumb {
     width: 40%;
     aspect-ratio: 16/9;
-    background: #222;
+    background: #333;
+    overflow: hidden;
 }
 
 .curated-thumb img {
