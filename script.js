@@ -1,4 +1,13 @@
 // Film Page Interactive Functions
+function toggleTheaterMode() {
+    document.body.classList.toggle('theater-mode');
+
+    // Smooth scrolling to top when entering theater mode
+    if (document.body.classList.contains('theater-mode')) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
+
 const videoModal = document.getElementById('videoModal');
 
 function playVideo() {
@@ -62,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             root: null, // viewport
             threshold: 0 // trigger as soon as even 1px is visible/hidden
         });
-        
+
         observer.observe(heroSection);
     }
 });
