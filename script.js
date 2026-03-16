@@ -148,3 +148,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Description Modal Logic
+const descModal = document.getElementById('descModal');
+
+function openDescModal() {
+    if (descModal) {
+        descModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeDescModal() {
+    if (descModal) {
+        descModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+if (descModal) {
+    descModal.addEventListener('click', (e) => {
+        if (e.target === descModal) {
+            closeDescModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && descModal.classList.contains('active')) {
+            closeDescModal();
+        }
+    });
+}

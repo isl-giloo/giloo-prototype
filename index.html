@@ -39,12 +39,7 @@
             </div>
             <!-- RIGHT GROUP -->
             <div class="nav__right">
-                <div class="nav__icon-btn nav__ai-btn" id="aiToggleBtn" style="cursor: pointer;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                </div>
+
                 <div class="nav__icon-btn" style="cursor: pointer;">
                     <button class="btn--icon-only" aria-label="Language">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -85,6 +80,16 @@
                 <!-- LEFT: Info + CTAs -->
                 <div class="hero__info">
                     <h1 class="hero__title">艾格妮撿風景</h1>
+                    <div class="hero__desc-wrapper mt-4">
+                        <p class="text-sm text-gray-400 inline">
+                            <span class="line-clamp-2 inline">
+                                艾格妮撿風景 (The Gleaners and I) 是一部由安妮·華達執導的紀錄片，探討了法國社會中各種形式的「拾荒」行為...
+                            </span>
+                            <button onclick="openDescModal()" class="ml-1 inline text-white underline hover:text-red-500 cursor-pointer">
+                                顯示更多
+                            </button>
+                        </p>
+                    </div>
                     <div class="hero__uploader">
                         <div class="uploader-avatar"></div>
                         <span>前景娛樂有限公司 Activator Marketing</span>
@@ -123,6 +128,13 @@
                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
+                        </button>
+                        <button id="aiToggleBtn" class="ai-chat-cta flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all duration-200" style="margin-left: 12px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 9999px; display: flex; align-items: center; gap: 8px; padding: 8px 16px; cursor: pointer; transition: background-color 0.2s; color: white;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles text-yellow-400" style="color: #facc15;">
+                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                                <path d="M5 3v4"/><path d="M3 5h4"/><path d="M21 17v4"/><path d="M19 19h4"/>
+                            </svg>
+                            <span class="text-sm font-medium text-white" style="font-size: 14px; font-weight: 500;">Giloo AI</span>
                         </button>
                     </div>
                 </div>
@@ -175,12 +187,6 @@
             <div class="content-left">
                 <div class="left-column-meta">
                     <div class="film-details">
-                        <div class="film-synopsis">
-                            艾格妮透過鏡頭捕捉那些被社會遺忘的人們，從拾穗者到現代社會的邊緣人。她以獨特的視角，溫柔而堅定地展現了這些人的生活狀態與尊嚴。這不僅是一部紀錄片，更是一次對人性的深刻探索。
-                        </div>
-
-
-
                         <div class="meta-list">
                             <span class="meta-label">類別</span>
                             <div class="meta-values">
@@ -452,6 +458,20 @@
                     </svg>
                     <div style="margin-top:16px;">Video Player Placeholder</div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description Modal -->
+    <div id="descModal" class="modal">
+        <div class="modal-wrapper modal-text-wrapper">
+            <div class="modal-close" onclick="closeDescModal()">✕</div>
+            <div class="desc-modal-content">
+                <h2 style="margin-bottom: 24px; font-size: 24px; font-weight: bold;">艾格妮撿風景 (The Gleaners and I)</h2>
+                <p style="font-size: 16px; line-height: 1.8; color: #e0e0e0;">
+                    艾格妮撿風景 (The Gleaners and I) 是一部由安妮·華達執導的紀錄片，探討了法國社會中各種形式的「拾荒」行為。從鄉間撿拾收成後遺留的農作物，到城市垃圾桶中尋找可用資源的人們，華達以她獨特、溫柔而充滿哲學意涵的視角，記錄下這些在物資充裕社會下的邊緣樣貌。<br><br>
+                    這不僅是對資源分配的批判，更是對生命尊嚴的致敬。影片中，華達將自己也視為一名「影像的拾荒者」，透過手持數位攝影機，撿拾生活中被忽略的珍貴片段。本片被廣泛認為是 21 世紀最重要的紀錄片之一，展現了創作者對社會與自身的深刻反思。
+                </p>
             </div>
         </div>
     </div>
