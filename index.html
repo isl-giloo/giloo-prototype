@@ -180,62 +180,8 @@
             </div>
         </section>
 
-        <!-- 2. CONTENT WRAPPER 2-Columns -->
-        <div class="container content-wrapper-split">
-
-            <!-- LEFT COLUMN (Meta Content) -->
-            <div class="content-left">
-                <div class="left-column-meta">
-                    <div class="film-details">
-                        <div class="meta-list">
-                            <span class="meta-label">類別</span>
-                            <div class="meta-values">
-                                <span class="meta-tag">人物</span>
-                                <span class="meta-tag">文化社會</span>
-                            </div>
-
-                            <span class="meta-label">導演</span>
-                            <span class="meta-value">Agnès Varda</span>
-
-                            <span class="meta-label">年份</span>
-                            <span class="meta-value">2021</span>
-
-                            <span class="meta-label">發行地</span>
-                            <span class="meta-value">Taiwan</span>
-
-                            <span class="meta-label">語言</span>
-                            <span class="meta-value">French</span>
-
-                            <span class="meta-label">字幕</span>
-                            <span class="meta-value">English</span>
-
-                            <span class="meta-label">影展/獎項</span>
-                            <span class="meta-value">2000 歐洲電影獎最佳紀錄片<br>2002 國家影評人協會獎</span>
-                        </div>
-
-                        <!-- Sticky CTA Group (Moved beneath Awards) -->
-                        <div class="sticky-cta-group">
-                            <button class="btn btn--primary" onclick="playVideo()" style="width: auto; flex: 1;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon points="5 3 19 12 5 21"></polygon>
-                                </svg>
-                                <span>播放正片</span>
-                            </button>
-                            <button class="icon-circle-btn" aria-label="加入片單"
-                                style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 255, 255, 0.15); color: white; border: none; flex-shrink: 0; cursor: pointer;">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- RIGHT COLUMN (Feed Content) -->
-            <div class="content-right">
+        <!-- 2. CONTENT WRAPPER -->
+        <div class="container" style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
 
                 <!-- 1. Featured Article (Updated Info) -->
                 <div class="featured-article-card">
@@ -383,9 +329,31 @@
                     </div>
                 </section>
 
-            </div>
-
         </div>
+
+        <!-- 3. BOTTOM FILM META SECTION -->
+        <section class="film-meta-section mt-12 py-20" style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 48px; padding-top: 80px; padding-bottom: 80px;">
+            <div class="container mx-auto" style="display: flex; gap: 48px; max-width: 1280px; margin: 0 auto;">
+                
+                <div style="flex: 1; display: flex; gap: 32px;">
+                    <div class="film-poster" style="width: 192px; flex-shrink: 0;">
+                        <img src="https://picsum.photos/seed/still1/800/533" style="width: 100%; border-radius: 8px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);" alt="Film Poster">
+                    </div>
+                    <div class="film-meta-info">
+                        <h3 style="font-size: 20px; font-weight: bold; margin-bottom: 16px;">電影資訊</h3>
+                        <ul style="color: #9ca3af; display: flex; flex-direction: column; gap: 8px;">
+                            <li>2021 / Taiwan / 紀錄片</li>
+                            <li>導演：Agnès Varda</li>
+                            <li>片長：95 分鐘</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="flex: 1; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px dashed rgba(255,255,255,0.1);">
+                </div>
+
+            </div>
+        </section>
 
     </main>
 

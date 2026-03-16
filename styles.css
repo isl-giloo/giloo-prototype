@@ -410,10 +410,10 @@ ul {
 }
 
 .hero__title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
 }
 
 .hero__meta {
@@ -502,92 +502,7 @@ ul {
 }
 
 
-/* =========================================
-   2-Column Page Layout (Refined: Sticky Sidebar)
-   ========================================= */
 
-/* Main Wrapper */
-.content-wrapper-split {
-    display: flex;
-    gap: 48px;
-    padding-bottom: 60px;
-}
-
-/* Left Column (Meta Section) */
-.content-left {
-    flex: 0 0 30%;
-    max-width: 340px;
-}
-
-/* Right Column (Feed Section) */
-.content-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-3xl);
-    min-width: 0;
-    /* prevent flex overflow */
-}
-
-@media (max-width: 1024px) {
-    .content-wrapper-split {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .content-left {
-        max-width: 100%;
-    }
-}
-
-/* 3.1 Move Meta to Left & Sticky */
-.left-column-meta {
-    margin-bottom: 1.5rem;
-    align-self: flex-start;
-}
-
-/* 左側 Sticky 容器 */
-.left-sticky-container {
-    position: sticky;
-    top: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* 預設隱藏的側欄 CTA */
-.sticky-cta-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(10px);
-}
-
-/* 當 Hero 滾出後啟用的 Class */
-.is-hero-hidden .sticky-cta-group {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
-@media (min-width: 1024px) {
-    .left-column-meta {
-        position: sticky;
-        top: 80px;
-        /* Nav height + spacing */
-        z-index: 10;
-        background: var(--color-bg-primary);
-        /* 確保滾動時不透明 */
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
 
 /* 3.2 Global Side Panel & Push Layout */
 .app-container {
